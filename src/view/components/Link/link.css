@@ -1,0 +1,129 @@
+.link {
+  --link-color: var(--primary);
+  --link-color-visited: var(--primary-strong);
+  --link-color-soft: var(--primary-soft);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  color: var(--link-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-base);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.link__label {
+  display: inline;
+}
+
+.link__icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9em;
+  flex-shrink: 0;
+}
+
+/* ── Underline variants ─────────────────────────────────────── */
+
+.link--underline-always {
+  text-decoration: underline;
+}
+
+.link--underline-hover {
+  text-decoration: none;
+}
+
+.link--underline-hover:hover,
+.link--underline-hover:focus-visible {
+  text-decoration: underline;
+}
+
+.link--underline-none {
+  text-decoration: none;
+}
+
+/* ── Visual variants ────────────────────────────────────────── */
+
+.link--variant-subtle {
+  font-weight: var(--font-weight-regular, 400);
+  opacity: 0.75;
+}
+
+.link--variant-subtle:hover,
+.link--variant-subtle:focus-visible {
+  opacity: 1;
+}
+
+.link--variant-standalone {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-weight: var(--font-weight-semibold, 600);
+}
+
+/* ── Colors ─────────────────────────────────────────────────── */
+
+.link--color-primary {
+  --link-color: var(--primary);
+  --link-color-visited: var(--primary-strong);
+  --link-color-soft: var(--primary-soft);
+}
+
+.link--color-secondary {
+  --link-color: var(--secondary);
+  --link-color-visited: var(--secondary-strong, var(--secondary));
+  --link-color-soft: var(--secondary-soft, color-mix(in oklab, var(--secondary) 12%, transparent));
+}
+
+.link--color-success {
+  --link-color: var(--success);
+  --link-color-visited: var(--success-strong, var(--success));
+}
+
+.link--color-error {
+  --link-color: var(--error);
+  --link-color-visited: var(--error-strong, var(--error));
+}
+
+.link--color-warning {
+  --link-color: var(--warning);
+  --link-color-visited: var(--warning-strong, var(--warning));
+}
+
+.link--color-info {
+  --link-color: var(--info);
+  --link-color-visited: var(--info-strong, var(--info));
+}
+
+/* ── Sizes ──────────────────────────────────────────────────── */
+
+.link--size-small {
+  font-size: var(--font-size-14);
+  gap: var(--space-4, 4px);
+}
+
+.link--size-large {
+  font-size: var(--font-size-18, 1.125rem);
+  gap: var(--space-10);
+}
+
+/* ── States ─────────────────────────────────────────────────── */
+
+.link:visited {
+  color: var(--link-color-visited);
+}
+
+.link:hover {
+  color: var(--link-color-visited);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--input-border-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

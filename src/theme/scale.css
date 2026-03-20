@@ -1,0 +1,28 @@
+:root {
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-14: 14px;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  --size-input-width: 100px;
+  --size-content-narrow: 640px;
+  --size-content-width: 780px;
+  --size-content-wide: 1120px;
+}

@@ -1,0 +1,21 @@
+/*
+ * Text component — co-located stylesheet.
+ *
+ * All variant and modifier classes are defined as design-system utilities in:
+ *   src/theme/typography.css
+ *
+ * They are globally available via src/theme/index.css → src/index.css.
+ * This file is imported by the Text component to co-locate style ownership
+ * with the component, and serves as the place for any Text-specific overrides.
+ */
+
+/* Ensure user-agent heading margins are reset when .text is applied
+   to a heading element (e.g. <h2 class="text text--h2">) */
+h1.text,
+h2.text,
+h3.text,
+h4.text,
+h5.text,
+h6.text {
+  margin: 0;
+}

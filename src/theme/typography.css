@@ -1,0 +1,302 @@
+/* ============================================================
+   TOKENS
+   ============================================================ */
+
+:root {
+  /* Font sizes */
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-24: 24px;
+  --font-size-32: 32px;
+
+  /* Line heights */
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.3;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.7;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.03em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+}
+
+/* ============================================================
+   ELEMENT DEFAULTS
+   ============================================================ */
+
+body {
+  color: var(--text-p);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--text-h);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 { font-size: clamp(32px, 3vw, 44px); }
+h2 { font-size: var(--font-size-32); }
+
+h3 {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+h4 {
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+h5 {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+h6 {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+p {
+  margin: 0;
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-base);
+}
+
+label,
+button,
+input {
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-base);
+}
+
+/* ============================================================
+   TEXT COMPONENT — BASE
+   ============================================================ */
+
+.text {
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-family-base);
+}
+
+/* ============================================================
+   VARIANT CLASSES
+   ============================================================ */
+
+/* Display — hero-scale heading */
+.text--display {
+  font-family: var(--font-family-heading);
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--text-h);
+}
+
+/* Headings */
+.text--h1 {
+  font-family: var(--font-family-heading);
+  font-size: clamp(32px, 3vw, 44px);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--text-h);
+}
+
+.text--h2 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-32);
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--text-h);
+}
+
+.text--h3 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-24);
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-h);
+}
+
+.text--h4 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-h);
+}
+
+.text--h5 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-h);
+}
+
+.text--h6 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--text-h);
+}
+
+/* Subtitles */
+.text--subtitle1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-p);
+}
+
+.text--subtitle2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-p);
+}
+
+/* Body */
+.text--body1 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-p);
+}
+
+.text--body2 {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-base);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-p);
+}
+
+/* Caption */
+.text--caption {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-muted);
+}
+
+/* Overline */
+.text--overline {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-12);
+  line-height: var(--line-height-snug);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   WEIGHT MODIFIERS
+   ============================================================ */
+
+.text--regular  { font-weight: var(--font-weight-regular); }
+.text--medium   { font-weight: var(--font-weight-medium); }
+.text--semibold { font-weight: var(--font-weight-semibold); }
+.text--bold     { font-weight: var(--font-weight-bold); }
+
+/* ============================================================
+   COLOR MODIFIERS
+   ============================================================ */
+
+.text--color-heading { color: var(--text-h); }
+.text--color-body    { color: var(--text-p); }
+.text--color-muted   { color: var(--text-muted); }
+
+/* ============================================================
+   ALIGNMENT MODIFIERS
+   ============================================================ */
+
+.text--align-left    { text-align: left; }
+.text--align-center  { text-align: center; }
+.text--align-right   { text-align: right; }
+.text--align-justify { text-align: justify; }
+
+/* ============================================================
+   TRANSFORM MODIFIERS
+   ============================================================ */
+
+.text--uppercase  { text-transform: uppercase; }
+.text--lowercase  { text-transform: lowercase; }
+.text--capitalize { text-transform: capitalize; }
+
+/* ============================================================
+   UTILITY MODIFIERS
+   ============================================================ */
+
+/* Single-line ellipsis */
+.text--truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Prevent line breaks */
+.text--no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Spacing below the element */
+.text--gutter-bottom {
+  margin-bottom: 0.35em;
+}
+
+/* Multi-line clamp — --text-line-clamp-count supplied via inline style */
+.text--line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+  -webkit-line-clamp: var(--text-line-clamp-count, 2);
+}
